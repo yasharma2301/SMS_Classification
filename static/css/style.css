@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #002240;
+    --secondary-color: #1c3fa8;
+    --dark-color: #254782;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+
+/* Showcase */
+
+.showcase {
+    padding-bottom: 20px;
+    height: auto;
+    background-color: var(--primary-color);
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+
+/* Footer */
+
+.footer {
+    text-align: center;
+}
+
+
+/* text area */
+
+textarea {
+    width: 500px;
+    height: 200px;
+    border: 6px solid #cccccc;
+    border-radius: 3px;
+    padding: 5px;
+    font-family: Tahoma, sans-serif;
+    background-repeat: no-repeat;
+    resize: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+
+/* Tablets and under */
+
+@media(max-width: 768px) {
+    .grid,
+    .showcase .grid,
+    .stats .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+
+/* Mobile */
+
+@media(max-width: 500px) {
+    textarea {
+        width: auto;
+    }
+    .navbar {
+        height: 110px;
+    }
+    .navbar .flex {
+        flex-direction: column;
+    }
+    .navbar ul {
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+/* Classification */
+
+.ham {
+    color: var(--success-color);
+    font-weight: 900;
+}
+
+.spam {
+    color: var(--error-color);
+    font-weight: 900;
+}
+
+
+/* Results */
+
+.prediction-text {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    display: inline-flex;
+}
+
+.prediction-text-bad {
+    background-color: var(--error-color);
+}
+
+.prediction-text-good {
+    background-color: var(--success-color);
+}
+
+.prediction-text:empty {
+    padding: 0px;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/utilities.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>SMS classification | Yash Sharma</title>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <div class="navbar">
+        <div class="container flex">
+            <h2 class="logo">SMS Classification</h2>
+            <nav>
+                <ul>
+                    <li><a href="mailto:ys909@snu.edu.in">Email</a></li>
+                    <li><a href="https://github.com/yasharma2301" target="_blank">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/yash-sharma-4797a0168/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- ShowCase -->
+    <section class="showcase">
+        <div class="container">
+            <div class="showcase-text">
+                <h1>Try out the algorithm!</h1>
+                <p>This project classifies b/w short message service / SMS if it is a spam or ham.
+                    <br> The model is based on Naive Bayes algorithm.
+                </p>
+                <a href="https://github.com/yasharma2301/Diabetes_Prediction" target="_blank" class="btn btn-dark outline">View On Github</a>
+            </div>
+            <form class="form my-1" id="myForm">
+                <div>
+                    <textarea placeholder="Enter your message here ..." name="sms_text" id="sms_text" cols="30" rows="10" required></textarea>
+                </div>
+                <input type="submit" value="Predict Spam" class="btn btn-dark">
+                <br>
+                <h3 id="prediction-text-id" class="prediction-text"></h3>
+            </form>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <h1 class="text-center my-1">Quick Access</h1>
+            <h3 class="stats-heading text-center">
+                Try classifying these sms snippets
+            </h3>
+
+            <div class="grid grid-3 text-center my-2">
+                <div class="card">
+                    <p>Congrats! You have won a lottery worth $5000. Revert back to this message to avail the prize.</p>
+                    <p class="spam">SPAM</p>
+                </div>
+                <div class="card">
+                    <p>Cannot talk right now, stuck in a office meeting with boss. What's up?</p>
+                    <p class="ham">HAM</p>
+                </div>
+                <div class="card">
+                    <p>URGENT! Your Mobile No 07808726822 was awarded a L2,000 Bonus Caller Prize on 02/09/03! This is our 2nd attempt to contact YOU! Call 0871-872-9758 BOX95QU </p>
+                    <p class="spam">SPAM</p>
+                </div>
+                <div class="card">
+                    <p>Hey Jack! Long time no see, what are you doing these days? How have you been?</p>
+                    <p class="ham">HAM</p>
+                </div>
+                <div class="card">
+                    <p>Free entry in 2 a weekly comp to win FA Cup final tkts 21st May 2005. Text FA to 87121 to receive entry question</p>
+                    <p class="spam">SPAM</p>
+                </div>
+                <div class="card">
+                    <p>Oops, I'll let you know when my roommate has completed his work.</p>
+                    <p class="ham">HAM</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-1">
+        <div class="container">
+            <div>
+                <h2>SMS Classification
+                </h2>
+                <p>Copyright &copy; 2020 Yash Sharma</p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="static/js/index.js"></script>
+</body>
+
+</html>
