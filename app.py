@@ -11,12 +11,16 @@ from nltk.stem.porter import PorterStemmer
 mimetypes.add_type('text/css', '.css')
 mimetypes.add_type('text/javascript', '.js')
 
-
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD']=True
 
 smsModel = pickle.load(open('sms_classification.pkl','rb'))
 cv = pickle.load(open('countVectorizer.pkl','rb'))
+
+try:
+    nltk.download('stopwords')
+except:
+    print('error downloading stopwords')
 
 @app.route('/favicon.ico')
 def favicon():
@@ -33,15 +37,14 @@ def predict():
         
         ps = PorterStemmer()
 
-        try:
-            nltk.download('stopwords')
-        except:
-            print('error downloading stopwords')
-
         review = re.sub('[^a-zA-Z]',' ',message)
         review = review.lower()
         review = review.split()
-        review = [ps.stem(word) for word in review if not word in stopwords.words('english')]
+        try:
+            review = [ps.stem(word) for word in review if not word in stopwords.words('english')]
+        except:
+            print('stopwords not downloaded')
+            
         review = ' '.join(review)
 
         X = cv.transform([review])
