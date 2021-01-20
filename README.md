@@ -24,7 +24,7 @@ The objective of the dataset is to diagnostically classifly b/w spam and ham mes
 
 # Results
 
-<img src="static/images/confustionMatrix.png" >
+<img src="static/images/confusionMatrix.png" >
 The accuracy score for this model is 0.985. 
 
 
